@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>886</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="mainTitle">
+    <property name="geometry">
+     <rect>
+      <x>-20</x>
+      <y>10</y>
+      <width>921</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>UTM American Sans</family>
+      <pointsize>19</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Tất cả sách</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>841</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Cài đặt bổ sung</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Z - A</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>10</y>
+       <width>91</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tựa sách</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Thể loại</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Thể loại phụ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tác giả</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Số trang</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Nhà xuất bản</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sắp xếp theo:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>10</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tác giả:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_2">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>10</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tất cả</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Có</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Không</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_3">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>10</y>
+       <width>69</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Tất cả</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Có</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Không</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>10</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nhà xuất bản:</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_2">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>10</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Vẽ biểu đồ</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>10</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Áp dụng</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTableWidget" name="bookTable">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>841</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Tựa sách</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Thể loại</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Thể loại phụ</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Tác giả</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Số trang</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Nhà xuất bản</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>886</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTra_c_u">
+    <property name="title">
+     <string>Tra cứu</string>
+    </property>
+    <addaction name="actionTra_c_u_s_ch"/>
+   </widget>
+   <widget class="QMenu" name="menuC_i_t">
+    <property name="title">
+     <string>Cài đặt</string>
+    </property>
+    <addaction name="actionConnection"/>
+   </widget>
+   <widget class="QMenu" name="menuMysql">
+    <property name="title">
+     <string>Mysql</string>
+    </property>
+   </widget>
+   <addaction name="menuTra_c_u"/>
+   <addaction name="menuC_i_t"/>
+   <addaction name="menuMysql"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionTra_c_u_s_ch">
+   <property name="text">
+    <string>Tra cứu sách</string>
+   </property>
+  </action>
+  <action name="actionConnection">
+   <property name="text">
+    <string>Kết nối</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
