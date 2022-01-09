@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Giai Đoạn 1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">Home</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Trang chủ</a></li>
+								<!--<li>
+									<a href="#">Dropdown</a>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+										<li>
+											<a href="#">And a submenu &hellip;</a>
+											<ul>
+												<li><a href="#">Lorem ipsum dolor</a></li>
+												<li><a href="#">Phasellus consequat</a></li>
+												<li><a href="#">Magna phasellus</a></li>
+												<li><a href="#">Etiam dolore nisl</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Veroeros feugiat</a></li>
+									</ul>
+								</li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="left-sidebar.html">Left Sidebar</a></li>-->
+								<li><a href="right-sidebar1.html">Giai Đoạn 1</a></li>
+								<li><a href="right-sidebar2.html">Giai Đoạn 2</a></li>
+								<li><a href="right-sidebar3.html">Tổng kết</a></li>
+								<li><a href="aboutus.html">Thành Viên</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+
+					<div class="container">
+						<div class="row gtr-200">
+							<!-- RIGHT -->
+							<div class="col-8 col-12-mobile" id="content">
+								<article id="main">
+									<header>
+										<h2><a>Bước 5</a></h2>
+										<p>
+                      Query dữ liệu.
+                      Trực quan data.
+										</p>
+									</header>
+									<a class="image featured"><img src="images/query.png" alt="" /></a>
+									<article id="truyvan">
+										<h2 class="major">Truy vấn dữ liệu</h2>
+										<span>Sử dụng mysql để ghép dữ liệu từ 2 máy client</span>
+										<pre><code>
+CREATE TABLE marknice.client_1
+(
+	Title MEDIUMTEXT,
+	Author MEDIUMTEXT,
+	Genre MEDIUMTEXT,
+	SubGenre MEDIUMTEXT,
+	Height INT,
+	Publisher MEDIUMTEXT
+);
+										</code></pre>
+										<span class="image main"><img src="images/truyvan1.png"  class="zoom"/></span>
+										<pre><code>
+CREATE TABLE marknice.client_2
+(
+	Title MEDIUMTEXT,
+	Author MEDIUMTEXT,
+	Genre MEDIUMTEXT,
+	SubGenre MEDIUMTEXT,
+	Height INT,
+	Publisher MEDIUMTEXT
+);
+										</code></pre>
+										<span class="image main"><img src="images/truyvan2.png"  class="zoom"/></span>
+										<span>Ghép dữ liệu</span>
+										<pre><code>
+CREATE TABLE 	marknice.host_data
+(
+	Title MEDIUMTEXT,
+	Author MEDIUMTEXT,
+	Genre MEDIUMTEXT,
+	SubGenre MEDIUMTEXT,
+	Height INT,
+	Publisher MEDIUMTEXT
+);
+INSERT INTO marknice.host_data
+(
+	SELECT * FROM marknice.client_1
+	UNION
+	SELECT * FROM marknice.client_2
+);
+										</code></pre>
+										<span>Kết quả</span>
+										<span class="image main"><img src="images/resultcompe.png"  class="zoom"/></span>
+										<span>Truy vấn</span>
+										<h3>Truy vấn về thông tin tác giả quyển sách chưa rỏ Publisher</h3>
+										<pre><code>
+SELECT *
+FROM marknice.host_data
+WHERE Publisher LIKE ''
+										</code></pre>
+										<h4>Truy vấn trên trả về 96 hàng tương ứng với 96 quyển sách chưa rõ Publisher</h4>
+										<span class="image main"><img src="images/unknowpublisher.png"  class="zoom"/></span>
+										<h3>Truy vấn về thông tin sách chưa rỏ Author</h3>
+										<pre><code>
+SELECT *
+FROM marknice.host_data
+WHERE Author LIKE ''
+										</code></pre>
+										<h4>Truy vấn trả về 24 hàng tương ứng với 24 quyển sách chưa rỏ Author</h4>
+										<span class="image main"><img src="images/unknowauthor.png"  class="zoom"/></span>
+							</article>
+								</article>
+							</div>
+							<!--Sidebar-->
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<header>
+										<h3><a>How we Connect with others</a></h3>
+									</header>
+									<p>
+										Các máy kết nối với nhau sử dụng 1 mạng LAN ảo do server Hamachi cung cấp để có thể thao tác và làm việc chung trên các máy ảo
+									</p>
+								</section>
+								<hr />
+								<section>
+									<header>
+										<h3><a>Các bước chi tiết</a></h3>
+									</header>
+									<!--<p>
+										Tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
+									</p>-->
+									<div class="row gtr-50">
+										<div class="col-4">
+											<a href="right-sidebar1.html" class="image fit"><img src="images/GD1.png" alt="" /></a>
+										</div>
+										<!--B1-->
+										<div class="col-8">
+											<h4>Mô tả</h4>
+										</div>
+										<!--B2-->
+										<div class="col-4">
+											<a href="B1.html" class="image fit"><img src="images/3start.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Bước 1</h4>
+											<p>
+												Chạy và khởi động máy client 1 , client 2 và host.
+											</p>
+										</div>
+										<!--B3-->
+										<div class="col-4">
+											<a href="B2.html" class="image fit"><img src="images/clean_split.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Bước 2</h4>
+											<p>
+												Lọc dữ liệu và chia thành 2 phần , trong đó mỗi phần ứng với 1 máy client.
+											</p>
+										</div>
+										<!--B4-->
+										<div class="col-4">
+											<a href="B3.html" class="image fit"><img src="images/transfer.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Bước 3</h4>
+											<p>
+												Gửi dữ liệu đã làm sạch về máy host.
+											</p>
+										</div>
+										<!--B5-->
+										<div class="col-4">
+											<a href="B4.html" class="image fit"><img src="images/xacnhan.png" alt="" /></a>
+										</div>
+										<div class="col-8">
+											<h4>Bước 4</h4>
+											<p>
+												Máy host xác nhận và tổng hợp data từ 2 phần đã gửi.
+											</p>
+										</div>
+									</div>
+									<footer>
+										<a href="index.html" class="button">Home</a>
+                    <p></p>
+										<a href="right-sidebar2.html" class="button">Giai Đoạn 2</a>
+									</footer>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
